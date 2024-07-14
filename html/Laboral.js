@@ -65,7 +65,7 @@ function obtenerContenido(proyecto) {
             '<p><strong>Empresa:</strong> Técnico de Motor</p>' +
             '<p><strong>Cargo:</strong> Paramétrico</p>' +
             '<p><strong>Periodo Laboral:</strong> Verano</p>' +
-            '<p><strong>Descripción del Puesto:</strong> Mientras termino de cursar mi grado universitario, a modo de jobbie, intento exprimir al máximo algunos de los motores de karting de conocidos probando las mejoras en el circuito "La Roca" en cantabria  </p>';
+            '<p><strong>Descripción del Puesto:</strong> Mientras termino de cursar mi grado universitario, a modo de hobby, intento exprimir al máximo algunos de los motores de karting de conocidos probando las mejoras en el circuito "La Roca" en cantabria  </p>';
     } else {
         return '<h2>Proyecto Desconocido</h2>';
     }
