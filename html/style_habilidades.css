@@ -1,0 +1,114 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ecf0f1;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #313131, #616161); /* Degradado de izquierda a derecha */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+#Habilidades {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#Habilidades h2 {
+    font-size: 2em;
+}
+
+#Habilidades p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#Habilidades a {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 1em 2em;
+    background-color: #cbb26a; /* Dorado */
+    color: #fff; /* Texto blanco */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega una sombra al texto para destacarlo */
+}
+
+#Habilidades a:hover {
+    background-color: #d8c690; /* Cambia el color al pasar el ratón sobre el botón */
+}
+
+.contenido-Habilidades {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contenido-Habilidades img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+.contenido-Habilidades p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#imagen-perfil {
+    width: 200px; /* Ancho deseado para la imagen */
+    height: 200px; /* Altura deseada para la imagen (mismo valor que el ancho para un círculo) */
+    border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
+    object-fit: cover; /* Mantiene la relación de aspecto original de la imagen */
+    object-position: center 80%; /* Mueve la imagen al centro vertical y a la parte inferior */
+}
+
+
+footer {
+    background-color: #333; /* Azul oscuro */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: auto; /* Esto empuja el footer hacia abajo */
+}
+
+.iconos-sociales img {
+    transition: all 0.5s ease-out;
+}
+
+.iconos-sociales img:hover {
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    transform: translate(0px, -5px);
+}
+
+#carrusel-imagenes {
+    width: 60%; /* Ajusta el ancho del carrusel al 80% del contenedor */
+    margin: 20% auto; /* Centra el carrusel horizontalmente */
+}
+
+#carrusel-imagenes img {
+    width: 100%; /* Ajusta el ancho de cada imagen al 100% del contenedor del carrusel */
+    border-radius: 20%; /* Mantiene la forma circular */
+    object-fit: cover;
+    object-position: center center; /* Centra la imagen dentro del contenedor */
+}
+
+.habilidades {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 1.2em;
+}
+
+.habilidades li {
+    margin-bottom: 10px;
+}

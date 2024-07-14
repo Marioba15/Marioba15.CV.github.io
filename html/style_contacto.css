@@ -1,0 +1,130 @@
+/* Estilos CSS para Contacto */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #313131, #616161); /* Degradado de izquierda a derecha */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    max-width: 70%; /* Cambiado: ancho máximo del 90% del contenedor principal */
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin: 1em 0;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.otroMotivo {
+    display: none;
+}
+
+button {
+    background-color: #cbb26a;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Cambiado: ancho del 100% para ocupar todo el contenedor */
+}
+
+button:hover {
+    background-color: #d8c690;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.iconos-sociales img {
+    transition: all 0.5s ease-out;
+}
+
+.iconos-sociales img:hover {
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    transform: translate(0px, -5px);
+}
+
+
+/* Estilos específicos para el desplegable de prefijos de teléfonos */
+.intl-tel-input {
+    width: 100%; /* Ajusta el ancho al 100% */
+    display: block !important; /* Asegura que siempre se muestre en bloque */
+    background-color: #fff; /* Color de fondo */
+    border: 1px solid #ccc; /* Borde del desplegable */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Estilos para la lista de opciones del desplegable */
+.intl-tel-input .country-list {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    max-height: 150px; /* Altura máxima del desplegable (ajusta según sea necesario) */
+    overflow-y: auto; /* Agrega scroll vertical siempre */
+    border: 1px solid #ccc; /* Borde del desplegable de opciones */
+    border-top: none; /* Quita el borde superior para que se vea más limpio */
+    border-radius: 0 0 4px 4px; /* Bordes redondeados en la parte inferior */
+}
+
+
+/* Estilos para cada opción del desplegable */
+.intl-tel-input .country-list li {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Agrega una transición al cambiar el fondo al pasar el ratón */
+}
+
+.intl-tel-input .country-list li:hover {
+    background-color: #f2f2f2; /* Cambia el fondo al pasar el ratón */
+}
+
+/* Estilos para el campo de entrada del número de teléfono */
+.intl-tel-input input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Borde del campo de entrada */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Estilos para el ícono de la bandera */
+.intl-tel-input .iti-flag {
+    margin-top: 8px;
+}
+
+/* Estilos para el contenedor del ícono de la bandera */
+.intl-tel-input .iti-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 8px;
+}

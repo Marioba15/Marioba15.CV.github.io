@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto</title>
+        <!-- Bibliotecas prefijo telefono-->
+        <!-- Estilos para intl-tel-input -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css">
+
+        <!-- jQuery (intl-tel-input depende de jQuery) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- Scripts para intl-tel-input -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
+
+        <!-- Versión específica de utils.js para evitar problemas de compatibilidad -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.js"></script>
+        <script src="Contacto.js"></script>
+        <link rel="stylesheet" type="text/css" href="style_contacto.css">
+
+
+ 
+    </head>
+
+    <body>
+        <header>
+            <h1>Contacto</h1>
+            <p>
+                Para contactar con Mario Barrio Alonso puede hacerse por correo electrónico a 
+                <a href="mailto:mariobarrioalonso.mba@gmail.com">mariobarrioalonso.mba@gmail.com</a>
+                rellenando los siguientes campos:
+            </p>
+        </header>
+
+        <main>
+            <form id="contactForm">
+                <label for="nombre">Nombre:</label>
+
+                <label for="email">Correo Electrónico:</label>
+
+                <label for="telefono">Teléfono:</label>
+
+
+                <label for="empresa">Empresa (opcional):</label>
+
+
+                <label for="mensaje">Mensaje:</label>
+
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Portfolio de Mario Barrio Alonso. Todos los derechos reservados.</p>
+            <div class="iconos-sociales">
+                <a href="https://www.linkedin.com/in/mario-barrio-alonso-1b6291227/" target="_blank"><img loading="lazy" alt="Sígueme en Linkeding" height="35" width="35" src="https://1.bp.blogspot.com/-Y2K0pMtHvU0/YQoXNjqmTbI/AAAAAAAAA2M/hK_s1Kw_x0U6-fbAab-HNmGzKTC9DBQSQCLcBGAsYHQ/s0/linkedIn.icono-oscuro.png" title="Sígueme en Linkeding"/></a>
+                
+                <a href="https://www.instagram.com/marioba15/" target="_blank"><img loading="lazy" alt="Sígueme en Instagram" height="35" width="35" src="https://1.bp.blogspot.com/-WqOhiV6yq_M/YPhkeb5RT6I/AAAAAAAAA0g/OoYS8E88xukHdeIgFzOYQFMug_UhUgVYACLcBGAsYHQ/s0/Instagram-icono-oscuro.png" title="Sígueme en Instagram"/></a>
+                
+                <a href="https://wa.me/34684060427/?text=Hola,vengo de ver tu Portfolio Web." target="_blank"><img loading="lazy" alt="Sígueme en WhatsApp" height="35" width="35" src="https://1.bp.blogspot.com/-p9gdVOariGI/YPhkf6NKQMI/AAAAAAAAA1A/rWm9JjlUtiUqFhscQ6UAAXvwHLi-gJrSgCLcBGAsYHQ/s0/whatsapp-icono-oscuro.png" title="Sígueme en WhatsApp"/></a>
+            </div>
+        </footer>
+        
+<!-- Dejo esta parte del JS en el html porque si lo pongo en el archivo JS no me funciona la bilbioteca de prefijos, creoq ue no me la lee-->
+        <script>
+            function mostrarOtroMotivo() {
+                var motivoSelect = document.getElementById('motivo');
+                var otroMotivoDiv = document.querySelector('.otroMotivo');
+
+                if (motivoSelect.value === 'otro') {
+                    otroMotivoDiv.style.display = 'block';
+                } else {
+                    otroMotivoDiv.style.display = 'none';
+                }
+            }
+
+            function enviarFormulario() {
+                var nombre = document.getElementById('nombre').value;
+                var email = document.getElementById('email').value;
+                var motivo = document.getElementById('motivo').value;
+                var otroMotivo = document.getElementById('otroMotivo').value;
+                var mensaje = document.getElementById('mensaje').value;
+
+                if (motivo === 'otro' && otroMotivo.trim() === '') {
+                    alert('Por favor, especifica el motivo en el campo "Otro".');
+                    return;
+                }
+
+                if (nombre.trim() === '' || email.trim() === '' || motivo === '' || mensaje.trim() === '') {
+                    alert('Por favor, completa todos los campos obligatorios.');
+                } else {
+                    alert('Formulario enviado correctamente');
+                    document.getElementById('contactForm').reset();
+                }
+            }
+
+            var input = document.querySelector("#telefono");
+            var iti = window.intlTelInput(input, {
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.js",
+                initialCountry: "auto",
+                separateDialCode: true,
+                geoIpLookup: function (callback) {
+                    $.get("https://ipinfo.io", function () {}, "jsonp").always(function (resp) {
+                        var countryCode = (resp && resp.country) ? resp.country : "ES";
+                        callback(countryCode);
+                    });
+                }
+            });
+
+            var countryData = iti.getSelectedCountryData();
+            var select = document.getElementsByClassName("iti__flag-container")[0];
+            var option = document.createElement("option");
+            option.value = countryData.iso2;
+            option.text = '+' + countryData.dialCode;
+            select.add(option, null);
+        </script>
+    </body>
+</html>

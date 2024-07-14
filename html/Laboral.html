@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia Laboral Creativa</title>
+    <script src="Laboral.js"></script>
+    <link rel="stylesheet" type="text/css" href="style_laboral.css">
+</head>
+
+<body>
+    <header>
+        <h1>Experiencia Laboral Creativa</h1>
+    </header>
+
+    <main>
+        <section id="ProyectoCreativo" class="informacion animate-float" onclick="mostrarInformacion('Totora Surf School')">
+            <h2>Totora Surf School</h2>
+            <div class="detalle-informacion">
+                <p><strong>Monitor de Surf</strong></p>
+                <img src="https://www.totorasurfschool.com/wp-content/uploads/2019/03/cropped-favicon.png" alt="Proyecto Creativo">
+            </div>
+        </section>
+
+        <section id="OtroProyectoCreativo" class="informacion animate-float" onclick="mostrarInformacion('Técnico de Motor')">
+            <h2>Técnico de Motor</h2>
+            <div class="detalle-informacion">
+                <p><strong>Paramétrico</strong></p>
+                <img src="Fotos/Karting.png" alt="Otro Proyecto Creativo">
+            </div>
+        </section>    </main>
+
+    <!-- Transparencia emergente -->
+    <div class="overlay" id="overlay" onclick="cerrarInformacion()">
+        <div class="popup" id="popup">
+            <img src="" alt="Imagen del proyecto" id="popupImagen">
+            <div class="informacion" id="popupInformacion">
+                <!-- Contenido de la transparencia emergente -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Portfolio de Mario Barrio Alonso. Todos los derechos reservados.</p>
+        <div class="iconos-sociales">
+            <a href="https://www.linkedin.com/in/mario-barrio-alonso-1b6291227/" target="_blank"><img loading="lazy" alt="Sígueme en Linkeding" height="35" width="35" src="https://1.bp.blogspot.com/-Y2K0pMtHvU0/YQoXNjqmTbI/AAAAAAAAA2M/hK_s1Kw_x0U6-fbAab-HNmGzKTC9DBQSQCLcBGAsYHQ/s0/linkedIn.icono-oscuro.png" title="Sígueme en Linkeding"/></a>
+            
+            <a href="https://www.instagram.com/marioba15/" target="_blank"><img loading="lazy" alt="Sígueme en Instagram" height="35" width="35" src="https://1.bp.blogspot.com/-WqOhiV6yq_M/YPhkeb5RT6I/AAAAAAAAA0g/OoYS8E88xukHdeIgFzOYQFMug_UhUgVYACLcBGAsYHQ/s0/Instagram-icono-oscuro.png" title="Sígueme en Instagram"/></a>
+            
+            <a href="https://wa.me/34684060427/?text=Hola,vengo de ver tu Portfolio Web." target="_blank"><img loading="lazy" alt="Sígueme en WhatsApp" height="35" width="35" src="https://1.bp.blogspot.com/-p9gdVOariGI/YPhkf6NKQMI/AAAAAAAAA1A/rWm9JjlUtiUqFhscQ6UAAXvwHLi-gJrSgCLcBGAsYHQ/s0/whatsapp-icono-oscuro.png" title="Sígueme en WhatsApp"/></a>
+        </div>
+    </footer>
+</body>
+
+</html>

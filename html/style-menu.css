@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #000;
+  font-weight: bold;
+}
+
+nav {
+  background: linear-gradient(to right, #313131, #616161); /* Degradado de izquierda a derecha */
+  padding: 15px 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.logo-container {
+  margin-left: 10px;
+}
+
+.logo-container img {
+  height: 50px;
+  border-radius: 50%; /* Hace que la imagen sea redonda */
+  transition: transform 0.3s ease; /* Agregamos una transición a la propiedad transform */
+}
+
+.logo-container img:hover {
+  transform: scale(1.1); /* Hacemos que el logo se agrande al pasar el ratón */
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  color: #cbb26a; /* Color dorado brillante por defecto */
+}
+
+a:hover {
+  color: rgb(192, 192, 192); /* Color gris cuando pasas el ratón */
+}
+
+/* Estilos para el menú desplegable en pantallas móviles */
+.mobile-menu-icon {
+  display: none; /* Ocultar por defecto en pantallas mayores a 600px */
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 2; /* Asegura que el botón de las rallas esté sobre el contenido */
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: #cbb26a;
+  transition: 0.4s;
+}
+
+ul {
+  align-items: center;
+  background: linear-gradient(to right, #313131, #616161);
+  top: 50px;
+  right: 0;
+  height: 0;
+  width: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+  z-index: 1; /* Asegura que el menú esté detrás del botón de las rallas */
+  
+}
+
+ul.active {
+  display: flex;
+  z-index: 3; /* Asegura que el menú activo esté en la capa superior */
+}
+
+li {
+  margin: 20px 20px;
+}
+
+.mobile-menu-icon:hover .bar {
+  background-color: rgb(192, 192, 192); /* Cambiar color al pasar el ratón */
+}
+
+
+/* Resto de tus estilos media queries */
+@media only screen and (max-width: 600px) {
+  nav {
+    padding: 10px 0;
+  }
+
+  main {
+    padding: 1em;
+  }
+
+  section {
+    margin-bottom: 1em;
+  }
+
+  .informacion {
+    padding: 1em;
+  }
+
+  .detalle-informacion img {
+    max-width: 100%;
+  }
+
+  .mobile-menu-icon {
+    display: flex;
+  }
+
+  ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #4646469e, #61616191);
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    padding-top: 0px;
+  }
+
+  ul.active {
+    display: flex;
+  }
+
+  li {
+    margin: 20px 0;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  main {
+    padding: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  main {
+    padding: 2em;
+  }
+
+  section {
+    margin-bottom: 2em;
+  }
+}

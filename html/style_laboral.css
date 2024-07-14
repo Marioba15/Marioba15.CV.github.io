@@ -1,0 +1,145 @@
+/* Estilos CSS para Experiencia Laboral Creativa */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Fondo claro */
+    color: #333; /* Texto oscuro */
+}
+
+/* Agrega el resto de tus estilos CSS aquí */
+header {
+    background: linear-gradient(to right, #313131, #616161); /* Degradado de izquierda a derecha */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+section {
+    position: relative;
+    width: 300px;
+    margin: 1em;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: rgb(183, 182, 182); /* Azul grisáceo más oscuro */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    border: 2px solid transparent; /* Agregado: borde inicial transparente */
+    cursor: pointer; /* Agregado: cursor de puntero al pasar el ratón */
+}
+
+section:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+    border-color: #cbb26a; /* Cambia el color del borde al pasar el ratón */
+}
+
+.informacion {
+    padding: 1em;
+    text-align: center;
+}
+
+.informacion p {
+    margin: 10px 0;
+    color: #ecf0f1; 
+}
+
+.informacion h2 {
+    margin-top: 0;
+    color: #000000b4; 
+}
+
+.informacion img {
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+footer { /*Estilo derechos*/
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.iconos-sociales img {
+    transition: all 0.5s ease-out;
+}
+
+.iconos-sociales img:hover {
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    transform: translate(0px, -5px);
+}
+
+/* Estilos para animaciones y elementos */
+.animate-float {
+    animation: floatAnimation 2s infinite ease-in-out;
+}
+
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Estilos para la transparencia emergente */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fondo negro transparente */
+    display: none; /* Inicialmente oculto */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background-color: rgb(202, 201, 201);
+    padding: 1em;
+    border-radius: 12px;
+    text-align: left; /* Alinea el texto a la izquierda */
+    display: flex;
+    flex-direction: column; /* Dispone los elementos en columna */
+    max-width: 80vw; /* máximo ancho del 80% del ancho de la ventana */
+    max-height: 80vh; /* Máximo alto del 80% del alto de la ventana */
+    overflow: auto; /* Agrega una barra de desplazamiento si el contenido es demasiado grande */
+}
+
+.popup img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 12px 12px 0 0; /* Ajusta la esquina superior de las imágenes */
+    margin-bottom: 1em; /* Espacio entre la imagen y el texto */
+    align-self: center;
+}
+
+
+.popup .informacion {
+    text-align: left; /* Alinea el texto a la izquierda */
+    flex-grow: 1; /* Hace que el área de información ocupe todo el espacio restante */
+}
+
+/* Estilos para hacer transparente el contenido detrás de la transparencia emergente */
+.overlay:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.351); /* Fondo blanco transparente */
+    z-index: -1;
+}

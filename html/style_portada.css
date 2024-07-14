@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#titulo {
+    margin: 0 auto;
+}
+
+#portada {
+    height: 100vh;
+    background-image: url('Fotos/fotofondo.jpg');    /*Foto hecha por mi con mi curso de Diseño con IA*/
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.efecto-escritura {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    animation: typing 3s steps(40), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
+
+#botones-container {
+    margin-top: 20px;
+    margin-bottom: 20px;  /* Agrega un espacio inferior adicional */
+}
+
+#botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.button-seccion {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-seccion:hover {
+    background-color: #2980b9; /* Cambia el color al pasar el ratón */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el ratón */
+    transition: background-color 0.3s, transform 0.3s; /* Agrega una transición suave */
+}
+
+
+#redes-sociales {
+    margin-top: 20px;
+}
+
+#redes-sociales a {
+    margin: 0 10px;
+}
+
+#redes-sociales img {
+    width: 30px;
+    height: 30px;
+}
+
+.iconos-sociales img {
+    transition: all 0.5s ease-out;
+}
+
+.iconos-sociales img:hover {
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    transform: translate(0px, -5px);
+}
+
+@media screen and (max-width: 600px) {
+    #botones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-seccion {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    #redes-sociales {
+        margin-top: 10px;  /* Reduce el espacio superior para pantallas más pequeñas */
+    }
+}
